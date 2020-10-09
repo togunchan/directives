@@ -12,7 +12,7 @@ export class ProductRepository{
         this.dataSource.getProducts().forEach(p=>this.products.push(p));
     }
 
-    getProducts(){
+    getProducts(): Product[]{
         return this.products;
     }
 
