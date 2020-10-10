@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 import { ProductRepository } from './repository.model';
 
 @Component({
@@ -7,10 +8,20 @@ import { ProductRepository } from './repository.model';
     styleUrls: ['./product.component.css']
 })
 
-export class ProductComponent{
+export class ProductComponent {
 
     model: ProductRepository = new ProductRepository();
 
-    productName: string = this.model.getProductById(1).name;
+    addProduct() {
+        this.model.addProduct(new Product(6, "Samsung s10", "iyi telefon", "6.jpg", 6000))
+    }
+
+    deleteProduct(product: Product) {
+        this.model.deleteProduct(product);
+    }   
+
+    updateProduct(product: Product){
+        product.name= "updated-product";
+    }
 
 }
