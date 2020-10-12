@@ -1,12 +1,2 @@
-<ng-template [ngTemplateOutlet]="productList" [ngTemplateOutletContext]="{products: model.getProducts()}"></ng-template>
-<ng-template [ngTemplateOutlet]="productList" [ngTemplateOutletContext]="{products: model.getProducts()}"></ng-template>
-
-<ng-template #productList let-Products="products">
-    <div class="m-5">
-        <ul class="list-group mt-2">
-            <li *ngFor="let product of Products" class="list-group-item">
-                {{ product.name }}
-            </li>
-        </ul>
-    </div>
-</ng-template>
+<!-- ng g(generate) d(directive) input-email -->
+<input type="text" appInputEmail>

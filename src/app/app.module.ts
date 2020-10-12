@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product.component';
+import { InputEmailDirective } from './input-email.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    InputEmailDirective
   ],
   imports: [
     BrowserModule
